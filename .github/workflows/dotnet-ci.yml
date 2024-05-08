@@ -59,3 +59,13 @@ jobs:
       with:
         name: FxCop-Analysis-Report
         path: ${{ github.workspace }}/TestResults/AnalysisReport.html
+
+    - name: Commit Test Results
+      run: |
+        git config --global user.email "marcus.sparky77@gmail.com"
+        git config --global user.name "sparky77"
+        git add TestResults/test-results.html
+        git commit -m "MS Add test results"
+        git push
+        env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
