@@ -26,7 +26,6 @@ public class FormTests
         practiceFormPage.EnterLastName("Doe");
         practiceFormPage.SubmitForm();
         Assert.Pass();
-        // Add assertions here to verify the test result
     }
 
     [TearDown]
