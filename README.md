@@ -7,17 +7,18 @@ This repository contains a C# .NET project that uses Selenium for automated web 
 - **NUnit**: Manages test cases and assertions to ensure the web application behaves as expected.
 
 ## GitHub Actions Integration
-The project integrates with GitHub Actions to enable continuous integration and deployment (CI/CD) through workflows defined in YAML (.yml) files. This automation streamlines the build process, testing, and deployment activities following commits to the repository.
+The project integrates with GitHub Actions, enabling continuous integration and deployment (CI/CD) through detailed workflows defined in YAML (.yml) files. This automation not only streamlines the build process and testing but also manages deployment activities upon commits to the repository.
 
-### Key Components of the GitHub Actions Workflow
-- `actions/checkout`: Checks out the source code for the build.
-- `actions/setup-dotnet`: Configures the .NET environment.
-- `dotnet build`: Compiles the application.
-- `dotnet test`: Executes the NUnit tests to validate web application functionality.
-- **Artifact Upload**: Successful tests capture results as artifacts, accessible in GitHub Actions logs.
+### GitHub Actions Workflow Details
+- **Checkout Code**: Utilizes `actions/checkout@v3` to check out the repository code under `$GITHUB_WORKSPACE`, ensuring that the latest version of the code is used for each build.
+- **Setup .NET Environment**: Uses `actions/setup-dotnet@v4` to prepare the .NET environment. This action configures the runner with .NET SDK version 7.0.400, ensuring compatibility with the project’s requirements.
+- **Build and Analyze Code**: The `dotnet build` command compiles the application on a Windows VM (`windows-latest`). It redirects build output and errors to log files within the TestResults directory for potential troubleshooting and review.
+- **Test Execution**: `dotnet test` command runs NUnit tests to validate web application functionality. Tests are executed without prior build (using `--no-build`) to utilize the latest successful build artifact, and test results are logged in HTML format for enhanced readability.
+- **Artifact Management**: Successful tests capture results as artifacts, which are then uploaded to GitHub Actions for review. This includes build output, build errors, and HTML test reports, ensuring that all relevant data from the testing process is accessible for analysis.
+- **Virtual Machine and Execution Environment**: The workflow runs on the latest version of the Windows runner (`windows-latest`) provided by GitHub Actions, which includes the most recent updates and patches. This VM environment is optimized for stability and performance in CI/CD workflows.
 
 ## Continuous Feedback and Quality Assurance
-Leveraging GitHub Actions, the project maintains high-quality standards with each integration, providing immediate feedback on the effects of recent changes. This CI/CD pipeline ensures quick detection and resolution of integration errors, enhancing the application's stability and reliability.
+By leveraging GitHub Actions, the project upholds high-quality standards with each integration, providing immediate feedback on the impact of recent changes. This CI/CD pipeline facilitates the quick detection and resolution of integration errors, ensuring the application’s stability and reliability.
 
 ## Getting Started
 To run this project locally, you will need:
