@@ -25,20 +25,20 @@ jobs:
 
     - name: Build and analyze code
       run: |
-        dotnet build --no-restore --configuration Release /p:ReportOutputPath=./TestResults/AnalysisReport.html /p:ReportOutputFormat=html
+        dotnet build --no-restore --configuration Release /p:ReportOutputPath=$GITHUB_WORKSPACE/TestResults/AnalysisReport.html /p:ReportOutputFormat=html
 
     - name: Test with HTML report
       run: |
-        dotnet test --no-build --verbosity normal --logger "html;LogFileName=./TestResults/test-results.html"
+        dotnet test --no-build --verbosity normal --logger "html;LogFileName=$GITHUB_WORKSPACE/TestResults/test-results.html"
 
     - name: Upload test report
       uses: actions/upload-artifact@v2
       with:
         name: Test-Results
-        path: ./TestResults/test-results.html
+        path: $GITHUB_WORKSPACE/TestResults/test-results.html
 
     - name: Upload analysis report
       uses: actions/upload-artifact@v2
       with:
         name: FxCop-Analysis-Report
-        path: ./TestResults/AnalysisReport.html
+        path: $GITHUB_WORKSPACE/TestResults/AnalysisReport.html
