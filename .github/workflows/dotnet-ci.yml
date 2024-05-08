@@ -23,10 +23,20 @@ jobs:
       run: dotnet restore
       # Run dotnet restore to restore the dependencies and tools of the project
 
-    - name: Build
-      run: dotnet build --no-restore --configuration Release
-      # Build the project and skip the restore step
+    - name: Build and analyze code
+      run: dotnet build --no-restore --configuration Release /p:ReportOutputPath=AnalysisReport.html /p:ReportOutputFormat=html
 
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
-      # Run tests without rebuilding the project
+    - name: Test with HTML report
+      run: dotnet test --no-build --verbosity normal --logger "html;LogFileName=test-results.html"
+
+    - name: Upload test report
+      uses: actions/upload-artifact@v2
+      with:
+        name: Test-Results
+        path: test-results.html
+
+    - name: Upload analysis report
+      uses: actions/upload-artifact@v2
+      with:
+        name: FxCop-Analysis-Report
+        path: AnalysisReport.html
