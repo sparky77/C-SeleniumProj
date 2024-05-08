@@ -67,5 +67,3 @@ jobs:
         git add TestResults/test-results.html
         git commit -m "MS Add test results"
         git push
-        env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
