@@ -39,8 +39,20 @@ jobs:
 
     - name: Build and analyze code
       run: |
-        dotnet build --no-restore --configuration Release /p:ReportOutputPath=${{ github.workspace }}/TestResults/AnalysisReport.html /p:ReportOutputFormat=html
+        dotnet build --no-restore --configuration Release > ${{ github.workspace }}/TestResults/build-output.txt 2> ${{ github.workspace }}/TestResults/build-errors.txt
 
+    - name: Upload build output
+      uses: actions/upload-artifact@v2
+      with:
+          name: Build-Output
+          path: ${{ github.workspace }}/TestResults/build-output.txt
+      
+    - name: Upload build errors
+      uses: actions/upload-artifact@v2
+      with:
+          name: Build-Errors
+          path: ${{ github.workspace }}/TestResults/build-errors.txt
+    
     - name: Test with HTML report
       run: |
         dotnet test --no-build --verbosity normal --logger "html;LogFileName=${{ github.workspace }}/TestResults/test-results.html"
@@ -54,11 +66,11 @@ jobs:
         name: Test-Results
         path: ${{ github.workspace }}/TestResults/test-results.html
 
-    - name: Upload analysis report
-      uses: actions/upload-artifact@v2
-      with:
-        name: FxCop-Analysis-Report
-        path: ${{ github.workspace }}/TestResults/AnalysisReport.html
+    #- name: Upload analysis report
+    #  uses: actions/upload-artifact@v2
+    #  with:
+    #    name: FxCop-Analysis-Report
+    #    path: ${{ github.workspace }}/TestResults/AnalysisReport.html
 
     - name: Commit Test Results
       run: |
