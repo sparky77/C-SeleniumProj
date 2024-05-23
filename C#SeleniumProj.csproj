@@ -6,6 +6,12 @@
     <RootNamespace>C_SeleniumProj</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <!-- Enable .NET Analyzers -->
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <!-- Set the analysis level -->
+    <AnalysisLevel>latest</AnalysisLevel>
+    <!-- Additional configuration to treat warnings as errors -->
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,7 +19,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
     <PackageReference Include="NUnit" Version="4.1.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
-    <PackageReference Include="Selenium.WebDriver" Version="4.19.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.21.0" />
     <PackageReference Include="WebDriverManager" Version="2.17.2" />
   </ItemGroup>
 

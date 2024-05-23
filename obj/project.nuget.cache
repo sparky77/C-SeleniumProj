@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AGs49PxSMRbG9qrLNYvUXIxKoK4gfSNbkKVWYTGhAw0NxDrsjfRgSAOz8p+W8sAGDQs7xlWQA6Rq2nyBMqYnMw==",
+  "dgSpecHash": "1HCnwU+SiEhCa/sbvr/EyjAlLxrhPXrS/NZp9F3Z70QrFH5BAVzstZ9o8MX8+khhtbO56ercb1K8KE1pwqwmwA==",
   "success": true,
   "projectFilePath": "D:\\Apps\\C#SeleniumProj\\C#SeleniumProj.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,7 @@
     "C:\\Users\\marcu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\nunit\\4.1.0\\nunit.4.1.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\nunit3testadapter\\4.5.0\\nunit3testadapter.4.5.0.nupkg.sha512",
-    "C:\\Users\\marcu\\.nuget\\packages\\selenium.webdriver\\4.19.0\\selenium.webdriver.4.19.0.nupkg.sha512",
+    "C:\\Users\\marcu\\.nuget\\packages\\selenium.webdriver\\4.21.0\\selenium.webdriver.4.21.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\sharpziplib\\1.4.2\\sharpziplib.1.4.2.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
     "C:\\Users\\marcu\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",

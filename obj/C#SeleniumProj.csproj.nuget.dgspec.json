@@ -35,6 +35,7 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -62,7 +63,7 @@
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[4.19.0, )"
+              "version": "[4.21.0, )"
             },
             "WebDriverManager": {
               "target": "Package",

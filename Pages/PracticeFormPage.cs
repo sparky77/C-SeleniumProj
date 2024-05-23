@@ -1,3 +1,4 @@
+using AngleSharp.Dom;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
@@ -11,10 +12,13 @@ public class PracticeFormPage
     private readonly By lastName = By.Id("lastName");
     private readonly By submitButton = By.Id("submit");
 
+    private readonly String practiceFormPageURL = "https://demoqa.com/automation-practice-form";
+
     // Constructor to initialize the WebDriver
     public PracticeFormPage(IWebDriver driver)
     {
         this.driver = driver;
+        driver?.Navigate().GoToUrl(practiceFormPageURL);
     }
 
     // Methods to interact with elements
@@ -30,8 +34,8 @@ public class PracticeFormPage
 
     public void SubmitForm()
     {
-    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-    IWebElement submitBtn = wait.Until(ExpectedConditions.ElementToBeClickable(submitButton));
+    //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+    //IWebElement submitBtn = wait.Until(ExpectedConditions.ElementToBeClickable(submitButton));
 
     IWebElement element = driver.FindElement(submitButton);
     ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", element);

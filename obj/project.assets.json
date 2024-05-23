@@ -385,7 +385,7 @@
           "build/netcoreapp3.1/NUnit3TestAdapter.props": {}
         }
       },
-      "Selenium.WebDriver/4.19.0": {
+      "Selenium.WebDriver/4.21.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1"
@@ -960,10 +960,10 @@
         "nunit_256.png"
       ]
     },
-    "Selenium.WebDriver/4.19.0": {
-      "sha512": "rguRY+Kbiow0s7RHtnHXnJdMgsmqAOOtv7ZGBtIQ1DbErkFtksrZHdUMcKyMK6VKNMmfsViqcCDGw4mPSPT70w==",
+    "Selenium.WebDriver/4.21.0": {
+      "sha512": "3xIx4CJunIoLEOROfDKILIzf76WfphTpQJYE98stG1GBVBKhFO5E6wXNfCqdiWt34iNlckcDr3z+qCD+RPfuUQ==",
       "type": "package",
-      "path": "selenium.webdriver/4.19.0",
+      "path": "selenium.webdriver/4.21.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -976,7 +976,7 @@
         "manager/linux/selenium-manager",
         "manager/macos/selenium-manager",
         "manager/windows/selenium-manager.exe",
-        "selenium.webdriver.4.19.0.nupkg.sha512",
+        "selenium.webdriver.4.21.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
       ]
     },
@@ -1183,7 +1183,7 @@
       "Microsoft.NET.Test.Sdk >= 17.9.0",
       "NUnit >= 4.1.0",
       "NUnit3TestAdapter >= 4.5.0",
-      "Selenium.WebDriver >= 4.19.0",
+      "Selenium.WebDriver >= 4.21.0",
       "WebDriverManager >= 2.17.2"
     ]
   },
@@ -1222,6 +1222,7 @@
         }
       },
       "warningProperties": {
+        "allWarningsAsErrors": true,
         "warnAsError": [
           "NU1605"
         ]
@@ -1249,7 +1250,7 @@
           },
           "Selenium.WebDriver": {
             "target": "Package",
-            "version": "[4.19.0, )"
+            "version": "[4.21.0, )"
           },
           "WebDriverManager": {
             "target": "Package",
