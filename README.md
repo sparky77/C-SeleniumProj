@@ -4,7 +4,7 @@ This repository contains a C# .NET project that uses Selenium for automated web 
 ## Framework and Technologies
 - **.NET**: The project is built using the .NET framework, providing a comprehensive and consistent programming model for application development.
 - **Selenium**: Employs Selenium for automating web browsers, simulating real user interactions with web pages.
-- **NUnit**: Manages test cases and assertions to ensure the web application behaves as expected. 
+- **NUnit**: Manages test cases and assertions to ensure the web application behaves as expected.  
 
 ## GitHub Actions Integration
 The project integrates with GitHub Actions, enabling continuous integration and deployment (CI/CD) through detailed workflows defined in YAML (.yml) files. This automation not only streamlines the build process and testing but also manages deployment activities upon commits to the repository.
