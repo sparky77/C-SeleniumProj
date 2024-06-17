@@ -1,5 +1,5 @@
 ## Project Overview
-This repository contains a C# .NET project that uses Selenium for automated web testing. The project aims to ensure robust testing of web applications by automating interactions with web browsers, leveraging Selenium for browser automation.
+This repository contains a C# .NET project that uses Selenium for automated web testing. The project aims to ensure robust testing of the web application by automating interactions with web browsers, leveraging Selenium for browser automation.
 
 ## Framework and Technologies
 - **.NET**: The project is built using the .NET framework, providing a comprehensive and consistent programming model for application development.
