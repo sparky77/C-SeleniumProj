@@ -7,7 +7,7 @@ This repository contains a C# .NET project that uses Selenium for automated web 
 - **NUnit**: Manages test cases and assertions ensuring the web application behaves as expected.  
 
 ## GitHub Actions Integration
-The project integrates with GitHub Actions, enabling continuous integration and deployment (CI/CD) through detailed workflows defined in YAML (.yml) files. This automation not only streamlines the build process and testing but also manages deployment activities upon commits to the repository.
+The project integrates with GitHub Actions, enabling continuous integration & deployment (CI/CD) through detailed workflows defined in YAML (.yml) files. This automation not only streamlines the build process and testing but also manages deployment activities upon commits to the repository.
 
 ### GitHub Actions Workflow Details
 - **Checkout Code**: Utilizes `actions/checkout@v3` to check out the repository code under `$GITHUB_WORKSPACE`, ensuring that the latest version of the code is used for each build.
